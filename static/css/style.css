@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', Arial, sans-serif;
+  background: #ffffff;
+  color: #003f5c;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f95f00;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 63, 92, 0.55), rgba(0, 63, 92, 0.55)),
+    url("../images/9-step-cyber-process-0123-1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.hero-text h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-bottom: 28px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #f95f00;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+section {
+  padding: 85px 0 45px;
+  scroll-margin-top: 90px;
+}
+
+#overview {
+  background: #eaf4ff;
+}
+
+#motivation {
+  background: #fff4eb;
+}
+
+#features {
+  background: #eefbea;
+}
+
+#challenges {
+  background: #f4efff;
+}
+
+#reflection {
+  background: #eef7fb;
+}
+
+#demo {
+  background: #fffaf0;
+}
+
+#future {
+  background: #f7f7f7;
+}
+
+h2,
+h3 {
+  color: #f95f00;
+}
+
+p,
+li {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  background: white;
+  color: black;
+  max-width: 650px;
+  margin: 24px auto 0;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 48px 12px 12px;
+  font-size: 16px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.analyze-btn {
+  margin-top: 14px;
+  background: #f95f00;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.meter-container {
+  margin-top: 18px;
+}
+
+.meter-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #003f5c;
+}
+
+.meter-bg {
+  width: 100%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.weak {
+  background: #d62828;
+}
+
+.medium {
+  background: #f4a261;
+}
+
+.strong {
+  background: #2a9d8f;
+}
+
+.results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.breach-warning {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.breach-danger {
+  background: #ffe5e5;
+  color: #a10000;
+  border: 1px solid #ffb3b3;
+}
+
+.breach-safe {
+  background: #e8fff0;
+  color: #176b3a;
+  border: 1px solid #b7ebc6;
+}
+
+.breach-unknown {
+  background: #fff8dd;
+  color: #7a5d00;
+  border: 1px solid #f0d878;
+}
+
+.mini-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+footer {
+  background: #003f5c;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+footer a {
+  color: #f95f00;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
+  }
+}
+.reflection-content {
+  max-width: 900px;
+}
+
+.reflection-content img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 20px auto 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}

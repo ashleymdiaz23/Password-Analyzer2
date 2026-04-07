@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Analyzer | Ashley Zapata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#motivation">Why I Chose It</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#challenges">Challenges</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#future">Future Work</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Password Security Analyzer</h1>
+      <h2>Directed Study Project by Ashley Zapata</h2>
+      <a class="hero-btn" href="#demo">Try the Analyzer</a>
+    </div>
+  </section>
+
+  <section id="overview">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h2>Project Overview</h2>
+          <p>
+            This project is a web-based password analyzer designed to help users understand whether a password is secure.
+            It evaluates password strength based on length, character variety, predictable patterns, and breach exposure.
+          </p>
+          <p>
+            The website combines cybersecurity concepts with full-stack development. The user enters a password, the backend
+            analyzes it, and the results are displayed instantly as a score, strength level, issue list, and breach-exposure warning.
+          </p>
+          <p>
+            The goal of the project is to make password security easier to understand in a practical, interactive way.
+          </p>
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='images/Untitled 2.png') }}" alt="Password Analyzer Screenshot">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motivation">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <img src="{{ url_for('static', filename='images/cybersecurity-concept-collage-design_23-2151877167.avif') }}" alt="Cybersecurity image">
+        </div>
+        <div>
+          <h2>Why I Chose This Project</h2>
+          <p>
+            I chose this project because password security is one of the most common weaknesses in cybersecurity.
+            Many people still create passwords that are short, predictable, reused, or already exposed in breach data.
+          </p>
+          <p>
+            I wanted to build something practical that connects directly to real-world security problems. Instead of making
+            a static informational project, I wanted to create a tool that actually lets users test and understand password risk.
+          </p>
+          <p>
+            Over time, the project expanded from a simple analyzer into a full website with a live demo, breach checking,
+            and a more polished user experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Core Features</h3>
+          <ul>
+            <li>Password strength classification</li>
+            <li>Numeric score from 0 to 100</li>
+            <li>Checks for uppercase, lowercase, numbers, and special characters</li>
+            <li>Length validation</li>
+            <li>Common password detection</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h3>Advanced Features</h3>
+          <ul>
+            <li>Strength meter bar</li>
+            <li>Show / hide password eye icon</li>
+            <li>Breach exposure check using known breach datasets</li>
+            <li>Real-time issue reporting</li>
+            <li>Interactive website interface using Flask</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="challenges">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h2>Challenges I Faced</h2>
+          <p>
+            One challenge I faced was learning how to connect the frontend website to backend analysis logic.
+            I had to understand how Flask handles routes, templates, and form submission.
+          </p>
+          <p>
+            Another challenge was implementing the breach-exposure feature in a privacy-conscious way. I had to learn how
+            SHA-1 hashing and k-anonymity work so the password would not be directly sent in plain text to the breach-check system.
+          </p>
+          <p>
+            I also had to organize the folder structure correctly, debug file paths, and make sure the project was large
+            enough in scope to work as a semester-long directed study.
+          </p>
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='images/iStock-828766970.jpg') }}" alt="Password security">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reflection">
+    <div class="container">
+      <div class="grid">
+        
+        <!-- TEXT -->
+        <div>
+          <h2>What I Learned</h2>
+  
+          <p>
+            This project taught me how a cybersecurity tool can be built incrementally
+            from a basic script into a more complete product.
+          </p>
+  
+          <p>
+            I learned how frontend and backend systems communicate, how password analysis
+            logic can be structured, and how external security data can be integrated
+            into a project.
+          </p>
+  
+          <p>
+            I also learned more about hashing, breach datasets, debugging, and how to
+            present technical work in a way that is understandable to users.
+          </p>
+        </div>
+  
+        
+        <div>
+          <img src="{{ url_for('static', filename='images/SEO-1826-bs-Strong-And-Weak-Password-On-Pi-287326699-1200x628.png') }}" alt="Strong vs weak password">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="container">
+      <h2 class="center">Live Demo</h2>
+      <p class="center">
+        Try a password below to see its score, strength, detected issues, and breach exposure.
+      </p>
+
+      <div class="card">
+        <div class="input-wrapper">
+          <input id="password" type="password" placeholder="Enter password" />
+          <button class="toggle-password" type="button" onclick="togglePassword()" id="eyeBtn">👁️</button>
+        </div>
+
+        <button class="analyze-btn" onclick="analyze()">Analyze</button>
+
+        <div class="meter-container">
+          <div class="meter-label">Strength Meter</div>
+          <div class="meter-bg">
+            <div id="meterFill" class="meter-fill"></div>
+          </div>
+        </div>
+
+        <div class="results" id="results"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="container">
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Add a password generator that suggests stronger alternatives</li>
+        <li>Add a history page to track previous analyses</li>
+        <li>Include entropy and crack-time estimates</li>
+        <li>Deploy the website online for public access</li>
+        <li>Expand pattern detection for more advanced password weaknesses</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ashley Zapata | Directed Study Project</p>
+  </footer>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const eyeBtn = document.getElementById("eyeBtn");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeBtn.textContent = "🙈";
+      } else {
+        passwordInput.type = "password";
+        eyeBtn.textContent = "👁️";
+      }
+    }
+
+    function updateMeter(score) {
+      const meterFill = document.getElementById("meterFill");
+      meterFill.style.width = score + "%";
+      meterFill.className = "meter-fill";
+
+      if (score < 50) {
+        meterFill.classList.add("weak");
+      } else if (score < 80) {
+        meterFill.classList.add("medium");
+      } else {
+        meterFill.classList.add("strong");
+      }
+    }
+
+    async function analyze() {
+      const pw = document.getElementById("password").value;
+      const results = document.getElementById("results");
+
+      results.innerHTML = "Analyzing...";
+
+      try {
+        const res = await fetch("/analyze", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password: pw })
+        });
+
+        const data = await res.json();
+
+        if (data.error) {
+          results.innerHTML = data.error;
+          updateMeter(0);
+          return;
+        }
+
+        updateMeter(data.score);
+
+        let html = `<p><strong>Score:</strong> ${data.score}/100</p>`;
+        html += `<p><strong>Strength:</strong> ${data.strength}</p>`;
+
+        if (data.issues.length) {
+          html += "<p><strong>Issues:</strong></p><ul>";
+          data.issues.forEach(i => html += `<li>${i}</li>`);
+          html += "</ul>";
+        } else {
+          html += "<p><strong>Issues:</strong> None found.</p>";
+        }
+
+        if (data.breach_count === -1) {
+          html += `<div class="breach-warning breach-unknown">
+                    Breach Check: Could not check breach exposure right now.
+                   </div>`;
+        } else if (data.breach_count > 0) {
+          html += `<div class="breach-warning breach-danger">
+                    This password has appeared in known breach datasets <strong>${data.breach_count.toLocaleString()}</strong> times.
+                   </div>`;
+        } else {
+          html += `<div class="breach-warning breach-safe">
+                    This password was not found in the breach dataset checked.
+                   </div>`;
+        }
+
+        results.innerHTML = html;
+      } catch (err) {
+        results.innerHTML = "Something went wrong while analyzing the password.";
+        updateMeter(0);
+      }
+    }
+  </script>
+
+</body>
+</html>
